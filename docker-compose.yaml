@@ -1,0 +1,11 @@
+services:
+  database:
+    container_name: target-solutions-challenge
+    image: mysql
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_DB=target-solutions
+    expose:
+      - 3306
+    network_mode: host
