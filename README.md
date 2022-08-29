@@ -1,4 +1,4 @@
-# Target Solutions Challenge
+# Target Solutions - Challenge
 
 Sistema responsável por manter Funcionários e realizar a conversão de seus salários de Dólar para Real.
 
@@ -42,6 +42,10 @@ Após isso é possível acessar o Swagger(Documentação) do projeto pelo Link:
 
 ## Adicionais:
 
+▸ Por simplicidade optei por desenvolver o projeto usando com o padrão "Layered Architecture". 
+```
+Controller --> Service --> Repository
+```
 ▸ No problema não estava claro como deveriam ser executadas as operações, decidi por usar uma API REST.                                               
 ▸ Por breviedade, não foi desenvolvido testes para 100% de cobertura, mas apenas uma amostra de como eu faria no "mundo real".
 
