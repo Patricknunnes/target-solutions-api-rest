@@ -7,49 +7,9 @@ Sistema responsável por manter Funcionários e realizar a conversão de seus sa
 ▸ Java - Versão 11                                                                                                                                                              
 ▸ Spring (Boot, Data JPA, Validation)                                                                                                                                                     
 ▸ Maven                                                                                                                  
-▸ MySql                                                                                                                  
-▸ Docker                                                                                                                  
+▸ MySql                                                                                                                                                                   
 
 ## Instruções:
-
-O projeto está disponibilizado de maneira containerizada, é necessário ter o Docker e Docker-Compose instalados no seu computador para executa-lo.
-
-Clone o projeto:
-
-```
-$ git clone https://github.com/Patricknunnes/target-solutions-api-rest.git
-```
-
-Acesse a pasta do projeto:
-
-```
-$ cd target-solutions-api-rest
-```
-
-Execute o projeto:
-
-```
-$ docker-compose up
-```
-
-Após isso é possível acessar o Swagger(Documentação) do projeto pelo Link:
-
-[Link do Swagger](http://localhost:8080/swagger-ui.html)
-
-## Throubleshooting:
-
-▸ É necessário ter as portas 8080 e 3306 disponíveis e livres no sistema para que seja possível executar os containers sem conflitos de porta.
-
-## Adicionais:
-
-▸ Por simplicidade optei por desenvolver o projeto usando com o padrão "Layered Architecture". 
-```
-Controller --> Service --> Repository
-```
-▸ No problema não estava claro como deveriam ser executadas as operações, decidi por usar uma API REST.                                               
-▸ Por breviedade, não foi desenvolvido testes para 100% de cobertura, mas apenas uma amostra de como eu faria no "mundo real".
-
-## Caso seja necessário a configuração manual:
 
 ▸ Download zip do projeto - [download](https://github.com/Patricknunnes/target-solutions-api-rest/archive/refs/heads/master.zip)                                       
 ▸ Download do JDK 11.0.15 - [download](https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html)                                              
@@ -68,3 +28,17 @@ Controller --> Service --> Repository
 
 ▸ Rode a classe ChallengeApplicationTests:                                                                                                                                
 ![image](https://user-images.githubusercontent.com/86694806/187120632-17847b08-ee62-4785-b1f9-70e3ea139f4b.png)
+
+Após isso é possível acessar o Swagger(Documentação) do projeto pelo Link:
+
+[Link do Swagger](http://localhost:8080/swagger-ui.html)
+
+## Adicionais:
+
+▸ Por simplicidade optei por desenvolver o projeto usando o padrão "Layered Architecture". 
+
+Controller --> Service --> Repository
+
+▸ No problema não estava claro como deveriam ser executadas as operações, decidi por usar uma API REST.                                               
+▸ Por breviedade, não foi desenvolvido testes para 100% de cobertura, mas apenas uma amostra de como eu faria no "mundo real".                                             
+▸ Como dito anteriormente, a documentação foi feita usando o Swagger.
