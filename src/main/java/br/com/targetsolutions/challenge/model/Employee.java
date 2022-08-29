@@ -1,5 +1,6 @@
 package br.com.targetsolutions.challenge.model;
 
+import br.com.targetsolutions.challenge.dto.EmployeeDTO;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -19,4 +20,15 @@ public class Employee {
     private int age;
     private String role;
     private String email;
+
+    public static Employee fromDTO(EmployeeDTO employeeDTO) {
+        Employee employee = new Employee();
+        employee.setName(employeeDTO.getName());
+        employee.setSalary(employeeDTO.getSalary());
+        employee.setAge(employeeDTO.getAge());
+        employee.setRole(employeeDTO.getRole());
+        employee.setEmail(employeeDTO.getEmail());
+
+        return employee;
+    }
 }

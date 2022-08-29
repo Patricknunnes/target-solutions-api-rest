@@ -4,6 +4,7 @@ import br.com.targetsolutions.challenge.dto.EmployeeDTO;
 import br.com.targetsolutions.challenge.exception.EmployeeNotFoundException;
 import br.com.targetsolutions.challenge.model.Employee;
 import br.com.targetsolutions.challenge.repository.EmployeeRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -11,26 +12,16 @@ import java.math.RoundingMode;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@RequiredArgsConstructor
 @Service
 public class EmployeeService {
 
     private final EmployeeRepository employeeRepository;
     private final DollarQuotationService dollarQuotationService;
 
-    public EmployeeService(EmployeeRepository employeeRepository, DollarQuotationService dollarQuotationService) {
-        this.employeeRepository = employeeRepository;
-        this.dollarQuotationService = dollarQuotationService;
-    }
-
     public Employee saveEmployee(EmployeeDTO employeeDTO) {
-        Employee employee = new Employee();
-        employee.setName(employeeDTO.getName());
-        employee.setSalary(employeeDTO.getSalary());
-        employee.setAge(employeeDTO.getAge());
-        employee.setRole(employeeDTO.getRole());
-        employee.setEmail(employeeDTO.getEmail());
 
-        return employeeRepository.save(employee);
+        return employeeRepository.save(Employee.fromDTO(employeeDTO));
     }
 
     public Employee updateEmployee(Long id, EmployeeDTO employeeDTO) {
