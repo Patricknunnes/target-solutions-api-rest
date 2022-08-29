@@ -51,9 +51,10 @@ Controller --> Service --> Repository
 
 ## Caso seja necessário a configuração manual:
 
-▸ Download do JDK 11.0.15 - [download](https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html)                                                                          
+▸ Download zip do projeto - [download](https://github.com/Patricknunnes/target-solutions-api-rest/archive/refs/heads/master.zip)                                       
+▸ Download do JDK 11.0.15 - [download](https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html)                                              
 ▸ Download MySql Server - [download](https://dev.mysql.com/downloads/mysql)                                                                                       
-▸ Necessário setar em application.properties o user e o password que foram criado na instalação do MySql:
+▸ Necessário setar em application.properties o user e o password que foram criados na instalação do MySql Server:
 ![image](https://user-images.githubusercontent.com/86694806/187119707-16a8c2ee-9696-4936-a170-9cdd8c7ef5bc.png)                                                                                                                                                                                                        
 ![image](https://user-images.githubusercontent.com/86694806/187119487-7261e064-2a6a-4f08-abac-6e8abf89eb57.png)                                                                                                       
 ▸ Depois disso, apenas Build o projeto.
@@ -67,5 +68,3 @@ Controller --> Service --> Repository
 
 ▸ Rode a classe ChallengeApplicationTests:                                                                                                                                
 ![image](https://user-images.githubusercontent.com/86694806/187120632-17847b08-ee62-4785-b1f9-70e3ea139f4b.png)
-
-
