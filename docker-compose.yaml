@@ -7,4 +7,19 @@ services:
       - MYSQL_DB=target-solutions
     expose:
       - 3306
+<<<<<<< HEAD
     network_mode: host
+=======
+    network_mode: host
+
+    app:
+      depends_on:
+        - mysqldb
+      build: ./target-solutions-app
+      restart: on-failure
+      env_file: ./.env
+      ports:
+        8080:8080
+      environment:
+        SPRING_APPLICATION_JSON: ./application.properties
+>>>>>>> 30382f0 (initial commit)
